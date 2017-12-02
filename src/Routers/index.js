@@ -2,6 +2,7 @@ import React from 'react';
 import { Scene, Router } from 'react-native-router-flux';
 import LoginForm from '../Components/LoginForm';
 import Messages from '../Components/Messages';
+import { styles } from './styles';
 
 const RouterComponent = () => {
   return (
@@ -20,18 +21,6 @@ const RouterComponent = () => {
       </Scene>
     </Router>
   );
-};
-
-const styles = {
-  navigationBarStyle: {
-    backgroundColor: '#757575',
-    height: '12%'
-  },
-  titleStyle: {
-    fontFamily: 'HelveticaNeueBold',
-    color: '#FFF',
-    marginTop: 19
-  }
 };
 
 export default RouterComponent;

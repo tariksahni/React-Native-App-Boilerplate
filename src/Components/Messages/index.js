@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView } from 'react-native';
+import { ListView, View } from 'react-native';
 import { connect } from 'react-redux';
 import ListItem from './ListItem';
 import { styles } from './styles';
@@ -23,6 +23,10 @@ class Messages extends Component {
         dataSource={this.dataSource}
         renderRow={this.renderRow}
         style={styles.messageContainer}
+        showsVerticalScrollIndicator={false}
+        renderSeparator={(sectionId, rowId) => (
+          <View key={rowId} style={styles.separator} />
+        )}
       />
     );
   }

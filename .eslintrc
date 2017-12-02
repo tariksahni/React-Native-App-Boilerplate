@@ -2,5 +2,6 @@
   "extends": "rallycoding",
   "rules": {
     "arrow-body-style": 0
+    // "comma-dangle": ["error", "always"]
   }
 }
