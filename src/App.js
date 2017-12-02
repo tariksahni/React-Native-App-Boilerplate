@@ -3,12 +3,15 @@ import { StatusBar, View } from 'react-native';
 import firebase from 'firebase';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import ReduxThunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import SplashScreen from 'react-native-smart-splash-screen';
 import reducers from './Reducers';
 import Router from './Routers';
+import rootSaga from './Actions/sagaIndex';
 
-const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(reducers, {}, applyMiddleware(sagaMiddleware));
+store.runSaga = sagaMiddleware.run(rootSaga);
 
 class App extends Component {
   componentWillMount() {

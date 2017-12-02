@@ -1,12 +1,13 @@
-import React, { Component } from "react";
-import { Text, Image, View } from "react-native";
-import { connect } from "react-redux";
-import InputField from "../InputField";
-import Button from "../Button";
-import Spinner from "../Spinner";
-import CardSection from "../CardSection";
-import { emailChange, passwordChange, loginUser } from "../../Actions/Auth";
-import { styles } from "./styles";
+import React, { Component } from 'react';
+import { Text, Image, View } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import InputField from '../InputField';
+import Button from '../Button';
+import Spinner from '../Spinner';
+import CardSection from '../CardSection';
+import * as actions from '../../Actions';
+import { styles } from './styles';
 
 class LoginForm extends Component {
   onEmailChange = text => {
@@ -19,7 +20,6 @@ class LoginForm extends Component {
 
   onButtonPress = () => {
     const { email, password } = this.props;
-
     this.props.loginUser({ email, password });
   };
 
@@ -32,7 +32,7 @@ class LoginForm extends Component {
     return (
       <View style={styles.mainContainer}>
         <Image
-          source={require("../../assets/Images/bg.jpg")}
+          source={require('../../assets/Images/bg.jpg')}
           style={styles.imageContainer}
         />
         <View style={styles.cardContainer}>
@@ -69,9 +69,8 @@ const mapStateToProps = ({ auth }) => {
   return { email, password, error, loading };
 };
 
-const mapDispatchToProps = {
-  emailChange,
-  passwordChange,
-  loginUser
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(actions, dispatch);
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
