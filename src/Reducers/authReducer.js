@@ -27,7 +27,7 @@ export default (state = INITIAL_STATE, action) => {
     case LOGIN_USER_FAIL:
       return {
         ...state,
-        error: 'Ankita Bodh, Sahi se fill kro !!!',
+        error: ' Sahi se fill kro !!!',
         password: '',
         loading: false
       };
