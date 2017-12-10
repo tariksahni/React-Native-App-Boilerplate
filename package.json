@@ -16,6 +16,7 @@
     "react-native": "0.50.3",
     "react-native-router-flux": "^3.35.0",
     "react-native-smart-splash-screen": "^2.3.5",
+    "react-native-swiper": "^1.5.13",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"

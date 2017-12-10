@@ -32,10 +32,7 @@ class LoginForm extends Component {
     );
     return (
       <View style={styles.mainContainer}>
-        <Image
-          source={require('../../assets/Images/bg1.jpg')} // eslint-disable-line global-require
-          style={styles.imageContainer}
-        />
+        <Image source={require('../../assets/Images/bg1.jpg')} style={styles.imageContainer} />
         <View style={styles.cardContainer}>
           <CardSection>
             <InputField

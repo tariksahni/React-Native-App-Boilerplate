@@ -1,7 +1,8 @@
 {
   "extends": "rallycoding",
   "rules": {
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
     // "comma-dangle": ["error", "always"]
+    "global-require": 0
   }
 }

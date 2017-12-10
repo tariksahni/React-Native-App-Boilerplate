@@ -39,25 +39,13 @@ class ListItem extends Component {
     const { expanded } = this.props;
     const { title, description } = this.props.message;
     return (
-      <TouchableOpacity
-        onPress={this.handleOnPress}
-        style={styles.oneMessageContainer}
-      >
+      <TouchableOpacity onPress={this.handleOnPress} style={styles.oneMessageContainer}>
         <View style={styles.imagePart}>
-          <Image
-            source={require('../../assets/Images/bg.jpg')} // eslint-disable-line global-require
-            style={styles.image}
-          />
+          <Image source={require('../../assets/Images/bg.jpg')} style={styles.image} />
         </View>
         <View style={styles.descriptionPart}>
           <View>
-            <Text
-              style={
-                !expanded
-                  ? styles.descriptionTitle
-                  : styles.descriptionTitleSelected
-              }
-            >
+            <Text style={!expanded ? styles.descriptionTitle : styles.descriptionTitleSelected}>
               {title}
             </Text>
           </View>
