@@ -8,12 +8,22 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#30625a'
+    backgroundColor: '#607d8b'
   },
-
+  imagePart: {
+    flex: 8,
+    paddingTop: 50,
+    marginTop: 10,
+    justifyContent: 'center',
+    backgroundColor: 'black'
+  },
   image: {
     width,
-    flex: 8
+    height: 300
+  },
+  image3: {
+    width,
+    height: width * 1.2
   },
 
   dots: {
@@ -23,7 +33,7 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     marginLeft: 3,
     marginRight: 3,
-    marginBottom: 25
+    marginBottom: 10
   },
 
   activeDot: {
@@ -33,19 +43,26 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     marginLeft: 3,
     marginRight: 3,
-    marginBottom: 25
+    marginBottom: 10
   },
 
   titleContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    backgroundColor: '#37474f'
   },
   titleText: {
     fontFamily: 'HelveticaNeueThin',
     color: 'white',
     fontSize: 20,
     marginLeft: 12
+  },
+  titleText2: {
+    fontFamily: 'HelveticaNeueThin',
+    color: 'white',
+    fontSize: 17,
+    marginLeft: 5
   },
   buttonText: {
     color: 'white',

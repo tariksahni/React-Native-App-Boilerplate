@@ -2,9 +2,18 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   navigationBarStyle: {
-    backgroundColor: '#284C3F',
+    // backgroundColor: '#37474f',
+    backgroundColor: '#607d8b',
     height: '12%'
   },
+  navigationBarStyle1: {
+    backgroundColor: '#4267b2',
+    height: '12%'
+  },
+  // navigationBarStyle2: {
+  //   backgroundColor: '#075e54',
+  //   height: '12%'
+  // },
   titleStyle: {
     fontFamily: 'HelveticaNeueMedium',
     color: 'white',

@@ -2,10 +2,10 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   inputStyle: {
-    color: '#d3d3d3',
+    color: 'white',
     paddingRight: 5,
     paddingLeft: 15,
-    fontSize: 16,
+    fontSize: 13,
     fontFamily: 'HelveticaNeueThin',
     lineHeight: 23,
     flex: 2

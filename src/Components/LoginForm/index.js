@@ -19,8 +19,7 @@ class LoginForm extends Component {
   };
 
   onButtonPress = () => {
-    const { email, password } = this.props;
-
+    const { password, email } = this.props;
     this.props.loginUser({ email, password });
   };
 
@@ -32,7 +31,10 @@ class LoginForm extends Component {
     );
     return (
       <View style={styles.mainContainer}>
-        <Image source={require('../../assets/Images/bg1.jpg')} style={styles.imageContainer} />
+        <Image
+          source={require('../../assets/Images/demo.jpg')}
+          style={styles.imageContainer}
+        />
         <View style={styles.cardContainer}>
           <CardSection>
             <InputField
@@ -47,14 +49,12 @@ class LoginForm extends Component {
             <InputField
               secureTextEntry
               label="Password"
-              placeholder="password"
+              placeholder="password here"
               onChangeText={this.onPasswordChange}
               value={this.props.password}
             />
           </CardSection>
-
           <Text style={styles.errorTextStyle}>{this.props.error}</Text>
-
           {renderButton}
         </View>
       </View>

@@ -35,19 +35,42 @@ class ListItem extends Component {
     }
   };
 
+  truncateTextLength = (title, maxLength = 40) => {
+    const titleLength = title.length;
+
+    if (titleLength > maxLength) {
+      return `${title.substring(0, maxLength)}...`;
+    }
+    return title;
+  };
+
   render() {
     const { expanded } = this.props;
-    const { title, description } = this.props.message;
+    const { title, description, image } = this.props.message;
     return (
-      <TouchableOpacity onPress={this.handleOnPress} style={styles.oneMessageContainer}>
+      <TouchableOpacity
+        onPress={this.handleOnPress}
+        style={styles.oneMessageContainer}
+      >
         <View style={styles.imagePart}>
-          <Image source={require('../../assets/Images/bg.jpg')} style={styles.image} />
+          <Image source={image} style={styles.image} />
         </View>
         <View style={styles.descriptionPart}>
-          <View>
-            <Text style={!expanded ? styles.descriptionTitle : styles.descriptionTitleSelected}>
+          <View style={styles.titlePart}>
+            <Text
+              style={
+                !expanded
+                  ? styles.descriptionTitle
+                  : styles.descriptionTitleSelected
+              }
+            >
               {title}
             </Text>
+            {!expanded ? (
+              <Text style={styles.smallDescription}>
+                {this.truncateTextLength(description)}
+              </Text>
+            ) : null}
           </View>
           {expanded && this.state.isDescriptionShown ? (
             <View>

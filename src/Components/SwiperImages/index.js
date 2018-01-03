@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
 import Swiper from 'react-native-swiper';
-import image from '../../assets/Images/bg.jpg';
+import mf1 from '../../assets/Images/demo.jpg';
+
 import { styles } from './styles';
 
 const data = [
   {
-    image,
-    title: 'Hi title1, ide aap aaoge '
+    image: mf1,
+    title: 'Demo'
   },
   {
-    image,
-    title: 'Hi title2, '
+    image: mf1,
+    title: 'Demo'
   },
   {
-    image,
-    title: 'Hi title3, ide aap aaoge '
+    image: mf1,
+    title: 'Demo'
   }
 ];
 
@@ -35,11 +36,20 @@ export default class extends Component {
         showsButtons
         style={styles.wrapper}
       >
-        {data.map(element => (
-          <View style={styles.slide}>
-            <Image style={styles.image} source={element.image} />
+        {data.map((element, index) => (
+          <View style={styles.slide} key={element.title}>
+            <View style={styles.imagePart}>
+              <Image
+                style={index === 4 ? styles.image3 : styles.image} // image3 for landscape
+                source={element.image}
+              />
+            </View>
             <View style={styles.titleContainer}>
-              <Text style={styles.titleText}>{element.title}</Text>
+              <Text
+                style={index === 2 ? styles.titleText2 : styles.titleText} // titletext2 for bigger text
+              >
+                {element.title}
+              </Text>
             </View>
           </View>
         ))}

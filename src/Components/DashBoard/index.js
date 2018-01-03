@@ -1,48 +1,94 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { Text, View, ImageBackground } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import DashBoardElement from '../DashBoardElement';
 import { styles } from './styles';
 
 class DashBoard extends Component {
-  handlePressMemories = () => {
+  // componentDidMount() {
+  //   BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
+  // }
+
+  // componentWillUnmount() {
+  //   BackHandler.removeEventListener(
+  //     'hardwareBackPress',
+  //     this.onBackButtonPressed
+  //   );
+  // }
+
+  // onBackButtonPressed() {
+  //   return true;
+  // }
+  handlePressMemoriesFriends = () => {
     Actions.swipper();
   };
 
-  handlePressMessage = () => {
+  handlePressMessageFriends = () => {
     Actions.messages();
+  };
+  handlePressMemories = () => {
+    Actions.memory();
+  };
+
+  handlePressMessage = () => {
+    Actions.message();
+  };
+  handlePressTimeline = () => {
+    Actions.timeline();
   };
 
   render() {
     return (
-      <View style={styles.container}>
+      <ImageBackground
+        style={styles.container}
+        source={require('../../assets/Images/intersection.png')}
+      >
         <View style={styles.topContainer}>
           <View style={styles.sideBarElement}>
-            <Text style={styles.titleText}>
-              You can Place any random content here like categories 1
-            </Text>
+            <Text style={styles.titleText}>Text Here !!!</Text>
+            <Text style={styles.titleText}>Text Here !!!</Text>
+            <Text style={styles.titleText}>Text Here !!!</Text>
             <View style={styles.borderLine} />
           </View>
           <View style={styles.contentContainer}>
-            <DashBoardElement title={'Messages'} onPress={this.handlePressMessage} />
-            <DashBoardElement title={'Memories'} onPress={this.handlePressMemories} />
-            <DashBoardElement title={'Content'} onPress={this.handlePressMessage} />
+            <DashBoardElement
+              id={1}
+              title={'Message'}
+              onPress={this.handlePressMessage}
+            />
+            <DashBoardElement
+              id={2}
+              title={'Images'}
+              onPress={this.handlePressMemories}
+            />
+            <DashBoardElement
+              id={3}
+              title={'Facebook'}
+              onPress={this.handlePressTimeline}
+            />
           </View>
         </View>
         <View style={styles.bottomContainer}>
           <View style={styles.sideBarElement}>
-            <Text style={styles.titleText}>
-              You can Place any random content here like categories 2
-            </Text>
+            <Text style={styles.titleText}>Text Here !!!</Text>
+            <Text style={styles.titleText}>Text Here !!!</Text>
+            <Text style={styles.titleText}>Text Here !!!</Text>
             <View style={styles.borderLine} />
           </View>
-          <View style={styles.contentContainer}>
-            <DashBoardElement title={'Messages'} onPress={this.handlePressMessage} />
-            <DashBoardElement title={'Memories'} onPress={this.handlePressMemories} />
-            <DashBoardElement title={'Content'} onPress={this.handlePressMessage} />
+          <View style={styles.contentContainerLower}>
+            <DashBoardElement
+              id={1}
+              title={'Message List'}
+              onPress={this.handlePressMessageFriends}
+            />
+            <DashBoardElement
+              id={2}
+              title={'Images'}
+              onPress={this.handlePressMemoriesFriends}
+            />
           </View>
         </View>
-      </View>
+      </ImageBackground>
     );
   }
 }

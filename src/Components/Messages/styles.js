@@ -14,32 +14,37 @@ export const styles = StyleSheet.create({
   separator: {
     flex: 1,
     height: StyleSheet.hairlineWidth,
-    width: '75%',
-    marginLeft: 75,
+    width: '72%',
+    marginLeft: 88,
     backgroundColor: '#8E8E8E'
   },
   oneMessageContainer: {
     margin: 5,
-    marginTop: 13,
-    marginBottom: 15,
     flexDirection: 'row',
     flex: 1
   },
   imagePart: {
+    marginTop: 13,
     flex: 1,
     alignItems: 'center'
   },
   image: {
-    width: 35,
-    height: 35,
+    width: 50,
+    height: 50,
     borderRadius: 50
   },
+
   descriptionPart: {
     flexDirection: 'column',
     flex: 5
   },
+  titlePart: {
+    marginLeft: 10,
+    marginTop: 10
+  },
+
   descriptionTitle: {
-    fontSize: 18,
+    fontSize: 22,
     paddingLeft: 6,
     fontFamily: 'HelveticaNeueMedium'
   },
@@ -51,8 +56,15 @@ export const styles = StyleSheet.create({
   },
   descriptionText: {
     fontSize: 14,
+    marginLeft: 10,
     paddingLeft: 6,
-    paddingRight: 6,
-    fontFamily: 'HelveticaNeueThin'
+    paddingRight: 10,
+    fontFamily: 'HelveticaNeueThin',
+    color: 'black'
+  },
+  smallDescription: {
+    marginLeft: 7,
+    fontFamily: 'HelveticaNeueThin',
+    color: 'black'
   }
 });

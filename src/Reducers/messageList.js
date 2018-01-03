@@ -1,4 +1,4 @@
-import messages from './messageData.json';
+import messages from './messageData.js';
 
 export default () => {
   return messages;

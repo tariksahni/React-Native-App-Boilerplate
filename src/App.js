@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <View style={{ flex: 1 }}>
-          <StatusBar translucent backgroundColor="black" />
+          <StatusBar translucent backgroundColor="#37474f" />
           <Router />
         </View>
       </Provider>

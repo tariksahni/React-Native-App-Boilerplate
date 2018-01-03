@@ -5,12 +5,13 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     paddingTop: 60,
-    backgroundColor: '#c4c4c4'
+    height: undefined,
+    width: undefined
   },
   topContainer: {
     flex: 1,
     flexDirection: 'column',
-    marginTop: 20,
+    // marginTop: 10,
     backgroundColor: '#ffffff',
     margin: 10,
     borderWidth: 1,
@@ -21,14 +22,16 @@ export const styles = StyleSheet.create({
   bottomContainer: {
     flex: 1,
     backgroundColor: '#ffffff',
-    margin: 10,
+    marginBottom: 10,
+    marginLeft: 10,
+    marginRight: 10,
     borderWidth: 1,
     borderColor: 'white',
     elevation: 3,
     borderRadius: 3
   },
   sideBarElement: {
-    flex: 2,
+    flex: 3,
     borderRadius: 2,
     justifyContent: 'center'
   },
@@ -41,12 +44,20 @@ export const styles = StyleSheet.create({
   },
   titleText: {
     textAlign: 'center',
-    fontFamily: 'HelveticaNeueBold'
+    fontFamily: 'HelveticaNeueThin',
+    color: 'black',
+    fontSize: 17
   },
   contentContainer: {
     flex: 4,
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center'
+  },
+  contentContainerLower: {
+    flex: 4,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     alignItems: 'center'
   }
 });

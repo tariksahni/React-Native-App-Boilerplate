@@ -2,7 +2,7 @@
   "extends": "rallycoding",
   "rules": {
     "arrow-body-style": 0,
-    // "comma-dangle": ["error", "always"]
+    "max-len": 0,
     "global-require": 0
   }
 }
